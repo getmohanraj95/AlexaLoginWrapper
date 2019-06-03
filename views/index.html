@@ -8,8 +8,9 @@
 
         var hash = window.location.hash.substr(1);
 
-        console.log(hash);
-        var a = 'https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?' + hash ;
+        var splitoptions = hash.split('&');
+
+        var a = 'https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?state=' +splitoptions[2]+'&code='+splitoptions[0] ;
         window.location.replace(a);
 
         }
