@@ -10,7 +10,8 @@
 
         var splitoptions = hash.split('&');
 
-        var a = 'https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?state=' +splitoptions[2]+'&code='+splitoptions[0] ;
+        var a = 'https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?' +splitoptions[2]+'&'+splitoptions[0] ;
+
         window.location.replace(a);
 
         }
