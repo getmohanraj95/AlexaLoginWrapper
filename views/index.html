@@ -8,9 +8,10 @@
 
         var hash = window.location.hash.substr(1);
 
-        var splitoptions = hash.split('&');
+        var splitoptions = hash.split('&'),
+            token = splitoptions[0].split('=');
 
-        var a = 'https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?' +splitoptions[2]+'&'+splitoptions[0] ;
+        var a = 'https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?' +splitoptions[2]+'&code='+token[0] ;
 
         window.location.replace(a);
 
