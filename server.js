@@ -18,8 +18,8 @@ app.get('/', function(req, res) {
 	else {
 		console.log(urlObj);
 		console.log(urlObj.hash);
-		console.log(req.url);
-		res.redirect('https://layla.amazon.com/api/skill/link/M28YSGJKH151MO#state='+req.query.state+'&access_token= '+ req.query.access_token +'&token_type=Bearer');
+		//console.log(req.url);
+		res.redirect('https://layla.amazon.com/api/skill/link/M28YSGJKH151MO#state='+urlObj.hash.state+'&access_token= '+ urlObj.hash.access_token +'&token_type=Bearer');
 	}
 });
 
