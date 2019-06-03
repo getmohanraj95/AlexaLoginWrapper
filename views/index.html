@@ -9,9 +9,21 @@
         var hash = window.location.hash.substr(1);
 
         var splitoptions = hash.split('&'),
-            token = splitoptions[0].split('=');
+            code ,state,splitone;
 
-        var a = 'https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?' + splitoptions[2]+'&'+token[1] ;
+            for(var i= 0; i<splitoptions.length;i++) {
+
+                splitone = splitoptions[i].split('=');
+
+                if(splitone[0] ==='state') {
+                    state = splitone[1];
+                }
+                if(splitone[0] ==='access_token') {
+                    code = splitone[1];
+                }
+
+            }
+        var a = 'https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?state=' + state + '&code=' + code ;
 
         window.location.replace(a);
 
