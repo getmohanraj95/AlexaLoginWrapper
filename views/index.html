@@ -23,7 +23,11 @@
                 }
 
             }
-        var a = 'https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?state=' + state + '&code=' + code ;
+            console.log(state);
+            console.log(code)
+
+
+        var a = 'https://pitangui.amazon.com/spa/skill/account-linking-status.html?vendorId=M28YSGJKH151MO?state=' + state + '&access_token=' + code +'&token_type=Bearer';
 
         window.location.replace(a);
 
