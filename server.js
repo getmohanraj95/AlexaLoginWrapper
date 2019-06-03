@@ -7,7 +7,11 @@ var url = require('url');
 
 var port = process.env.PORT || 8080;
 
+app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
+app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
+
 
 app.get('/', function(req, res) {
 	const urlObj = url.parse(req.url)
@@ -16,11 +20,9 @@ app.get('/', function(req, res) {
 		res.redirect('https://accounts.google.com/o/oauth2/v2/auth?scope=' + req.query.scope+' &include_granted_scopes=true&state='+ req.query.state+'&redirect_uri=https://alexa-login-wrapper.herokuapp.com&response_type=token&client_id='+ req.query.client_id);
 	}
 	else {
-		console.log(req.url);
-		console.log(urlObj);
-		console.log(urlObj.hash);
-		//console.log(req.url);
-		res.redirect('https://layla.amazon.com/api/skill/link/M28YSGJKH151MO#state='+urlObj.hash.state+'&access_token= '+ urlObj.hash.access_token +'&token_type=Bearer');
+
+		res.render('index');
+		//res.redirect('https://layla.amazon.com/api/skill/link/M28YSGJKH151MO#state='+urlObj.hash.state+'&access_token= '+ urlObj.hash.access_token +'&token_type=Bearer');
 	}
 });
 
