@@ -11,7 +11,7 @@
         var splitoptions = hash.split('&'),
             token = splitoptions[0].split('=');
 
-        var a = 'https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?' +splitoptions[2]+'&code='+token[0] ;
+        var a = 'https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?' + splitoptions[2]+'&'+token[1] ;
 
         window.location.replace(a);
 
