@@ -26,6 +26,13 @@ app.get('/', function(req, res) {
 	}
 });
 
+app.get('/', function(req, res) {
+	const urlObj = url.parse(req.url)
+
+		res.render('index');
+		//res.redirect('https://layla.amazon.com/api/skill/link/M28YSGJKH151MO#state='+urlObj.hash.state+'&access_token= '+ urlObj.hash.access_token +'&token_type=Bearer');
+
+});
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
 })
