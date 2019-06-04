@@ -4,9 +4,8 @@
     <script type="text/javascript">
 
         function formAutoSubmit () {
-
-
-        var hash = window.location.hash.substr(1);
+            if(window.location.hash){
+                var hash = window.location.hash.substr(1);
 
         var splitoptions = hash.split('&'),
             code ,state,splitone;
@@ -30,6 +29,8 @@
         //var a = 'https://pitangui.amazon.com/spa/skill/account-linking-status.html?vendorId=M28YSGJKH151MO#state=' + state + '&access_token=' + code +'&token_type=Bearer';
             var a = 'https://alexa.amazon.co.jp/api/skill/link/M28YSGJKH151MO?state='+ state +'&code=' + code;
         window.location.replace(a);
+            }
+
 
         }
 
