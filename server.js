@@ -15,9 +15,13 @@ app.engine('html', require('ejs').renderFile);
 
 app.get('/', function(req, res) {
 	const urlObj = url.parse(req.url)
-	if(req.query.client_id ==='828225850885-kaka1030svjtfjtjfndpmm13mjkpb2d0.apps.googleusercontent.com') {
+	if(req.query.client_id ==='828225850885-kaka1030svjtfjtjfndpmm13mjkpb2d0.apps.googleusercontent.com' && req.query.code) {
 
 		res.redirect('https://accounts.google.com/o/oauth2/v2/auth?scope=' + req.query.scope+' &include_granted_scopes=true&state='+ req.query.state+'&redirect_uri=https://alexa-login-wrapper.herokuapp.com&response_type=token&client_id='+ req.query.client_id);
+	}
+	if(req.query.client_id  && req.query.code) {
+
+		res.redirect('https://accounts.google.com/o/oauth2/revoke?token='+ req.query.code);
 	}
 	else {
 
