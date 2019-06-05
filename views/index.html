@@ -8,7 +8,7 @@
                 var hash = window.location.hash.substr(1);
 
         var splitoptions = hash.split('&'),
-            code ,state,splitone;
+            code ,state,splitone,expiresin;
 
             for(var i= 0; i<splitoptions.length;i++) {
 
@@ -21,12 +21,16 @@
                     code = splitone[1];
                 }
 
+                if(splitone[0] ==='expires_in') {
+                    expiresin = splitone[1];
+                }
+
             }
             console.log(state);
             console.log(code)
 
 
-        var a = 'https://pitangui.amazon.com/spa/skill/account-linking-status.html?vendorId=M28YSGJKH151MO#state=' + state + '&access_token=' + code +'&token_type=Bearer';
+        var a = 'https://pitangui.amazon.com/spa/skill/account-linking-status.html?vendorId=M28YSGJKH151MO#state=' + state + '&access_token=' + code +'expires_in='+expires_in+'&token_type=Bearer';
             //var a = 'https://alexa.amazon.co.jp/api/skill/link/M28YSGJKH151MO?state='+ state +'&code=' + code;
          //   var a = 'https://alexa-login-wrapper.herokuapp.com?state='+ state +'&code='+ code ;
             //var a = 'https://alexa-login-wrapper.herokuapp.com/app?state='+state +'&code='+code;
