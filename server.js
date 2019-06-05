@@ -27,7 +27,7 @@ app.get('/', function(req, res) {
 	// }
 	if(req.query.code) {
 		//res.redirect('https://alexa.amazon.co.jp/api/skill/link/M28YSGJKH151MO?state='+req.query.state + '&code=' + req.query.code)
-		res.render('index');
+		//res.render('index');
 		res.send('index');
 	}
 	else {
