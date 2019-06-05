@@ -26,7 +26,7 @@ app.get('/', function(req, res) {
 	}
 });
 
-app.get('/', function(req, res) {
+app.post('/', function(req, res) {
 	const urlObj = url.parse(req.url)
 
 		res.render('index');
