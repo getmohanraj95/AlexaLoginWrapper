@@ -26,9 +26,10 @@ app.get('/', function(req, res) {
 	// 	res.redirect('https://accounts.google.com/o/oauth2/revoke?token='+ req.query.code);
 	// }
 	if(req.query.code) {
-		//res.redirect('https://alexa.amazon.co.jp/api/skill/link/M28YSGJKH151MO?state='+req.query.state + '&code=' + req.query.code)
+
+		res.redirect('https://alexa.amazon.co.jp/api/skill/link/M28YSGJKH151MO?state='+req.query.state + '&code=' + req.query.code);
 		//res.render('index');
-		res.send('index');
+		//res.send('index');
 	}
 	else {
 
