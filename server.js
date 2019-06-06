@@ -25,7 +25,7 @@ app.get('/', function(req, res) {
 		console.log("get 2")
 		//console.log('https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?state='+req.query.state + '&code=' + req.query.code);
 
-		res.redirect('https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?state='+req.query.state + '&code=' + req.query.code);
+		res.redirect('https://alexa-login-wrapper.herokuapp.com?state='+req.query.state + '&code=' + req.query.code);
 
 	}
 
