@@ -16,7 +16,7 @@ app.engine('html', require('ejs').renderFile);
 
 app.get('/', function(req, res) {
 	console.log(datafile.data);
-	res.send('helo mhha')
+	//res.send('helo mhha')
 	const urlObj = url.parse(req.url)
 
 	if(req.query.client_id ==='828225850885-kaka1030svjtfjtjfndpmm13mjkpb2d0.apps.googleusercontent.com' && !req.query.client_secret ) {
