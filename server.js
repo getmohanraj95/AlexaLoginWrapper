@@ -55,7 +55,8 @@ app.post('/', function(req, res) {
 
 	console.log("post 1")
 	console.log(req.body);
-	res.redirect('www.googleapis.com/oauth2/v4/token?code=4/YQHgNlELY8MdSvhg1MyHvRi8A8-WefjuEsfsoKjtemC2e0_WSMUrHSuq0E_s09p0-We7z4wnca6JSmi6yD2xUZA#&client_id=828225850885-kaka1030svjtfjtjfndpmm13mjkpb2d0.apps.googleusercontent.com&client_secret=ipJjuOPeW4kwdQvLFiPBnVq9&redirect_uri=https://alexa-login-wrapper.herokuapp.com&grant_type=authorization_code');
+	//res.redirect('www.googleapis.com/oauth2/v4/token?code=4/YQHgNlELY8MdSvhg1MyHvRi8A8-WefjuEsfsoKjtemC2e0_WSMUrHSuq0E_s09p0-We7z4wnca6JSmi6yD2xUZA#&client_id=828225850885-kaka1030svjtfjtjfndpmm13mjkpb2d0.apps.googleusercontent.com&client_secret=ipJjuOPeW4kwdQvLFiPBnVq9&redirect_uri=https://alexa-login-wrapper.herokuapp.com&grant_type=authorization_code');
+	res.redirect('https://layla.amazon.com/api/skill/link/M28YSGJKH151MO');
 	//res.redirect('https://accounts.google.com/o/oauth2/v4/token?code='+req.query.code+'&client_id='+ req.query.client_id + '&client_secret=' + req.query.client_secret +'&redirect_uri=https://alexa-login-wrapper.herokuapp.com'+'grant_type=authorization_code' );
 
 });
