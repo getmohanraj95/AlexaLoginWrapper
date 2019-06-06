@@ -39,7 +39,7 @@ app.get('/', function(req, res) {
 
 		var a = datafile.data + 1;
 
-		let file = jsonfile.readFileSync(datafile);
+		let file = jsonfile.readFileSync('./data.json');
 
 		file.data =  a ;
 
