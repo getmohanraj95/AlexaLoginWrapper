@@ -29,10 +29,10 @@ app.get('/', function(req, res) {
 
 	}
 
-	if(req.query.client_secret) {
+	if(req.query.state) {
 
 
-			res.redirect('https://accounts.google.com/o/oauth2/v4/token?code='+req.query.code+'&client_id='+ req.query.client_id + '&client_secret=' + req.query.client_secret +'&redirect_uri=https://alexa-login-wrapper.herokuapp.com'+'grant_type=authorization_code' );
+		res.redirect('https://accounts.google.com/o/oauth2/v4/token?code='+req.query.code+'&client_id='+ req.query.client_id + '&client_secret=' + req.query.client_secret +'&redirect_uri=https://alexa-login-wrapper.herokuapp.com'+'grant_type=authorization_code' );
 
 	}
 
