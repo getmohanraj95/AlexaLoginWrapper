@@ -33,10 +33,9 @@ app.get('/', function(req, res) {
 
 	else if(req.query.code) {
 		console.log("get 2")
-		var origin = req.get('origin');
-		console.log(origin);
 
-		//res.redirect('https://alexa-login-wrapper.herokuapp.com?state='+req.query.state + '&code=' + req.query.code);
+
+		res.redirect('https://alexa-login-wrapper.herokuapp.com?state='+req.query.state + '&code=' + req.query.code);
 		//res.redirect('www.googleapis.com/oauth2/v4/token?code=4/YQHgNlELY8MdSvhg1MyHvRi8A8-WefjuEsfsoKjtemC2e0_WSMUrHSuq0E_s09p0-We7z4wnca6JSmi6yD2xUZA#&client_id=828225850885-kaka1030svjtfjtjfndpmm13mjkpb2d0.apps.googleusercontent.com&client_secret=ipJjuOPeW4kwdQvLFiPBnVq9&redirect_uri=https://alexa-login-wrapper.herokuapp.com&grant_type=authorization_code');
 
 
