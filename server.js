@@ -40,23 +40,20 @@ app.get('/', function(req, res) {
 
 
 		res.redirect('https://layla.amazon.com/api/skill/link/M28YSGJKH151MO');
-//?access_token='+ req.query.access_token + '&refresh_token'
+
 
 	}
-
-	// else {
-
-	// 	res.render('index');
-	// 	//res.redirect('https://layla.amazon.com/api/skill/link/M28YSGJKH151MO#state='+urlObj.hash.state+'&access_token= '+ urlObj.hash.access_token +'&token_type=Bearer');
-	// }
 
 });
 
 app.post('/', function(req, res) {
-
-		res.redirect('https://accounts.google.com/o/oauth2/v4/token?code='+req.query.code+'&client_id='+ req.query.client_id + '&client_secret=' + req.query.client_secret +'&redirect_uri=https://alexa-login-wrapper.herokuapp.com'+'grant_type=authorization_code' );
+	console.log("	res.redirect('https://macdealexa.co.in');")
+	res.redirect('https://macdealexa.co.in');
+		//res.redirect('https://accounts.google.com/o/oauth2/v4/token?code='+req.query.code+'&client_id='+ req.query.client_id + '&client_secret=' + req.query.client_secret +'&redirect_uri=https://alexa-login-wrapper.herokuapp.com'+'grant_type=authorization_code' );
 
 });
+
+
 
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
