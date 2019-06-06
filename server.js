@@ -115,19 +115,3 @@ app.listen(port, function() {
 
 // 		res.send(ab);
 
-// var options = { method: 'POST',
-// 		url: 'http://www.googleapis.com/oauth2/v4/token',
-// 		qs: { code: '4/YQHgNlELY8MdSvhg1MyHvRi8A8-WefjuEsfsoKjtemC2e0_WSMUrHSuq0E_s09p0-We7z4wnca6JSmi6yD2xUZA' },
-// 		headers:
-// 		{ 'Postman-Token': '659a66e2-95a1-4306-a720-d92b93b3b34d',
-// 			'cache-control': 'no-cache',
-// 			'content-type': 'application/x-www-form-urlencoded' } };
-
-// 		request(options, function (error, response, body) {
-// 		if (error) throw new Error(error);
-// 			ab = body;
-// 		console.log(body);
-
-// 		});
-
-// 		res.send(ab);
