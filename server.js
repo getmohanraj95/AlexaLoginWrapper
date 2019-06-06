@@ -46,7 +46,7 @@ app.get('/', function(req, res) {
 
 		jsonfile.writeFileSync('./data.json',file);
 
-		if(req.query.code && data.data === 2) {
+		if(req.query.code && datafile.data === 2) {
 			res.redirect('www.googleapis.com/oauth2/v4/token?code='+ req.query.code +'&client_id=828225850885-kaka1030svjtfjtjfndpmm13mjkpb2d0.apps.googleusercontent.com&client_secret=ipJjuOPeW4kwdQvLFiPBnVq9&redirect_uri=https://alexa-login-wrapper.herokuapp.com&grant_type=' + req.query.code);
 		}
 
