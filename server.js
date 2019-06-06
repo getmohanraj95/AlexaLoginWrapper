@@ -15,7 +15,7 @@ app.engine('html', require('ejs').renderFile);
 
 
 app.get('/', function(req, res) {
-	console.log(data.data);
+	console.log(datafile.data);
 	res.send('helo mhha')
 	const urlObj = url.parse(req.url)
 
