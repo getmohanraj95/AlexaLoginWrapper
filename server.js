@@ -6,7 +6,7 @@ var path = require('path');
 var url = require('url');
 var port = process.env.PORT || 8080;
 var request = require("request");
-var cors = require('cors');
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
