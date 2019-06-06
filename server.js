@@ -6,13 +6,13 @@ var path = require('path');
 var url = require('url');
 var port = process.env.PORT || 8080;
 var request = require("request");
+var cors = require('cors');
 
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
 
-app.use(allowCrossDomain)
 
 app.get('/', function(req, res) {
 
@@ -52,10 +52,6 @@ app.get('/', function(req, res) {
 		});
 
 		res.send(ab);
-
-
-
-
 	}
 
 	else if(req.query.state) {
