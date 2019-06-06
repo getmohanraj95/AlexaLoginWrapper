@@ -47,7 +47,7 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req, res) {
-	console.log("	res.redirect('https://macdealexa.co.in');")
+	console.log(req)
 	res.redirect('https://macdealexa.co.in');
 		//res.redirect('https://accounts.google.com/o/oauth2/v4/token?code='+req.query.code+'&client_id='+ req.query.client_id + '&client_secret=' + req.query.client_secret +'&redirect_uri=https://alexa-login-wrapper.herokuapp.com'+'grant_type=authorization_code' );
 
