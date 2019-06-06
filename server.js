@@ -21,7 +21,7 @@ app.get('/', function(req, res) {
 		res.redirect('https://accounts.google.com/o/oauth2/v2/auth?scope=' + req.query.scope+' &include_granted_scopes=true&access_type=offline&state='+ req.query.state+'&redirect_uri=https://alexa-login-wrapper.herokuapp.com&response_type=code&client_id='+ req.query.client_id);
 	}
 
-	if(req.query.code) {
+	else if(req.query.code) {
 		console.log("get 2")
 		console.log('https://layla.amazon.com/api/skill/link/M28YSGJKH151MO?state='+req.query.state + '&code=' + req.query.code);
 
@@ -29,14 +29,14 @@ app.get('/', function(req, res) {
 
 	}
 
-	if(req.query.state) {
+	else if(req.query.state) {
 
 		console.log("get 3")
 		res.redirect('https://accounts.google.com/o/oauth2/v4/token?code='+req.query.code+'&client_id='+ req.query.client_id + '&client_secret=' + req.query.client_secret +'&redirect_uri=https://alexa-login-wrapper.herokuapp.com'+'grant_type=authorization_code' );
 
 	}
 
-	if(req.query.access_token) {
+	else if(req.query.access_token) {
 
 		console.log("get 4")
 		res.redirect('https://layla.amazon.com/api/skill/link/M28YSGJKH151MO');
